@@ -1,0 +1,104 @@
+/* General styles for the navbar */
+.navbar {
+  background-color: #169b80; /* Deep blue */
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo */
+.navbar-logo {
+  color: #ecf0f1; /* Light grayish white */
+  font-size: 24px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navbar links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link, .navbar-button {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-link:hover, .navbar-button:hover {
+  background-color: #3498db; /* Elegant blue */
+  transform: scale(1.05);
+}
+
+.navbar-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Navbar username */
+.navbar-username {
+  margin-right: 10px;
+  font-weight: bold;
+  color: white;
+  position: inherit;
+  font-family: 'Georgia', serif;
+}
+
+/* Hamburger menu (hidden by default) */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Show hamburger menu */
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* Hide links by default on mobile */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #169b80;
+    padding: 10px 0;
+  }
+
+  .navbar-links.show {
+    display: flex; /* Show when active */
+  }
+
+  .navbar-link, .navbar-button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+}

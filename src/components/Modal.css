@@ -1,0 +1,96 @@
+/* Modal overlay to cover the whole screen */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the modal is on top of other content */
+    padding: 10px;
+}
+  
+/* Modal content box styling */
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-y: auto;
+    max-height: 80vh; /* Allow scrolling if content is too long */
+}
+  
+/* Close button inside the modal */
+.modal-close-btn {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #1ABC9C;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: opacity 0.2s ease;
+}
+  
+/* Hover effect on close button */
+.modal-close-btn:hover {
+    color: #247c6b;
+}
+
+.modal-create-btn {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #1ABC9C;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: opacity 0.2s ease;
+}
+  
+/* Modal Heading */
+.modal-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+  
+/* Form input and textarea styling */
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #333;
+}
+  
+/* Focus effect for input/textarea */
+.modal-content input:focus,
+.modal-content textarea:focus {
+    outline: none;
+    border-color: #6200ea;
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5);
+}
+  
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+  

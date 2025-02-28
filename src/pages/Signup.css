@@ -1,0 +1,88 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Signup Container */
+.signup-container {
+  background-color: white;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-title {
+  font-size: 2rem;
+  color: #2C3E50;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Input Fields */
+.signup-input {
+  align-self: center;
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #BDC3C7;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  color: #34495E;
+  transition: border-color 0.3s ease;
+}
+
+.signup-input:focus {
+  border-color: #1ABC9C;
+  outline: none;
+}
+
+.signup-input::placeholder {
+  color: #BDC3C7;
+}
+
+/* Button Styling */
+.signup-btn {
+  width: 50%;
+  padding: 12px;
+  background-color: #1ABC9C;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: #16A085;
+  transform: translateY(-2px);
+}
+
+.signup-btn:active {
+  background-color: #1ABC9C;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .signup-title {
+    font-size: 1.8rem;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}

@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4f6f9;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px; /* Add some padding for smaller devices */
+}
+
+h1, h2, h3 {
+  font-size: 1.5rem; /* Relative font size */
+  line-height: 1.4;
+}
+
+input, button {
+  font-size: 1rem; /* Use relative font size */
+}
+
+/* Make the main container responsive */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Use percentages or viewport units for responsive scaling */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Smaller text on smaller screens */
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Slightly smaller headings */
+  }
+
+  .signup-card, .login-card, .home-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .signup-input, .login-input, .signup-button, .login-button {
+    width: 100%;
+    padding: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 480px) {
+  .signup-card, .login-card, .home-container {
+    max-width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .signup-title, .login-title {
+    font-size: 1.1rem;
   }
 }
